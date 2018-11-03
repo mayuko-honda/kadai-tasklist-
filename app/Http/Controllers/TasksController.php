@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Task;
+
 class TasksController extends Controller
 {
     /**
@@ -26,7 +28,10 @@ class TasksController extends Controller
      */
     public function create()
     {
-        //
+         return view('tasks.create', [
+            'task' => $task,
+        ]);
+
     }
 
     /**
@@ -37,7 +42,10 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $task = new Task;
+        $task->content = $request->content;
+        $task->save();
+        return redirect('/');
     }
 
     /**
