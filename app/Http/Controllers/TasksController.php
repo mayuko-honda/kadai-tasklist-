@@ -28,6 +28,7 @@ class TasksController extends Controller
      */
     public function create()
     {
+        $task = new Task;
          return view('tasks.create', [
             'task' => $task,
         ]);
@@ -42,9 +43,14 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-      $task = new Task;
+      $this->validate($request, [
+            'content' => 'required|max:191',
+        ]);
+
+        $task = new Task;
         $task->content = $request->content;
         $task->save();
+     
         return redirect('/');
     }
 
@@ -63,8 +69,13 @@ class TasksController extends Controller
      */
     public function edit($id)
     {
-        //
+      $task = Task::find($id);
+
+        return view('tasks.edit', [
+            'task' => $task,
+        ]);
     }
+    
     /**
      * Update the specified resource in storage.
      *
@@ -91,6 +102,10 @@ class TasksController extends Controller
     
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'content' => 'required|max:191',
+        ]);
+        
         $task = Task::find($id);
         $task->content = $request->content;
         $task->save();
