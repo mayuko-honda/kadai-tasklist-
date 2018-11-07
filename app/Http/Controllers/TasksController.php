@@ -49,7 +49,7 @@ class TasksController extends Controller
         ]);
 
         $task = new Task;
-        $message->status = $request->status; 
+        $task->status = $request->status; 
         $task->content = $request->content;
         $task->save();
      
@@ -110,7 +110,7 @@ class TasksController extends Controller
         ]);
         
         $task = Task::find($id);
-        $message->status = $request->status; 
+        $task->status = $request->status; 
         $task->content = $request->content;
         $task->save();
 
