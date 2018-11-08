@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <status>kadai-tasklist</status>
+        <title>kadai-tasklist</title>
     </head>
 
     <body>
