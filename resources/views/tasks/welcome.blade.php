@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <status>Laravel</status>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -45,7 +45,7 @@
                 text-align: center;
             }
 
-            .title {
+            .status {
                 font-size: 84px;
             }
 
@@ -78,7 +78,7 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
+                <div class="status m-b-md">
                     Laravel
                 </div>
 
