@@ -2,13 +2,7 @@
 
 @section('content')
    <div class="row">
-            <div class="col-xs-12">
-     　　<div class="col-sm-3">col-sm-3</div>
-        <div class="col-sm-offset-2 col-sm-5">col-sm-5</div>
-        <div class="col-md-5">col-md-5</div>
-        <div class="col-md-offset-2 col-md-5">col-md-5</div>
-        <div class="col-lg-offset-3 ">col-lg-3</div>
-
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6"> 
     <h1>id: {{ $task->id }} のタスク編集ページ</h1>
     
     {!! Form::model($task, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!}
