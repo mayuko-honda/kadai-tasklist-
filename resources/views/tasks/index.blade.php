@@ -1,14 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-@include('users.users', ['users' => $users])
 @if (count($tasks) > 0)
 <table class="table table-striped">
             <thead>
                 <tr>
                     <th>id</th>
                     <th>ステータス</th>
-                    <th>タスク</th>
+                    <th>内容</th>
                 </tr>
             </thead>
             <tbody>
